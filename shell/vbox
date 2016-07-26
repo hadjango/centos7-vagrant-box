@@ -1,0 +1,10 @@
+#!/bin/bash
+# Install VirtualBox Guest Additions
+# necessary:
+cd /tmp
+mkdir /mnt/iso
+mount -o loop /home/vagrant/VBoxGuestAdditions.iso /mnt/iso
+sh /mnt/iso/VBoxLinuxAdditions.run
+umount /mnt/iso
+rmdir /mnt/iso
+rm -f /home/vagrant/VBoxGuestAdditions.iso
